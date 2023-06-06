@@ -1,0 +1,475 @@
+{
+    "programming": {
+        "docker_instructions": [
+            {
+                "id": 0,
+                "name": "--",
+                "label": "Choose one docker instruction"
+            },
+            {
+                "id": 1,
+                "name": "ENTRYPOINT",
+                "label": "ENTRYPOINT"
+            },
+            {
+                "id": 2,
+                "name": "ARGS",
+                "label": "ARGS"
+            },
+            {
+                "id": 3,
+                "name": "ENV",
+                "label": "ENV"
+            },
+            {
+                "id": 4,
+                "name": "ADD",
+                "label": "ADD"
+            },
+            {
+                "id": 5,
+                "name": "LABEL",
+                "label": "LABEL"
+            },
+            {
+                "id": 6,
+                "name": "MAINTAINER",
+                "label": "MAINTAINER"
+            },
+            {
+                "id": 7,
+                "name": "USER",
+                "label": "USER"
+            },
+            {
+                "id": 8,
+                "name": "FROM",
+                "label": "FROM"
+            },
+            {
+                "id": 9,
+                "name": "EXPOSE",
+                "label": "EXPOSE"
+            },
+            {
+                "id": 10,
+                "name": "WORKDIR",
+                "label": "WORKDIR"
+            },
+            {
+                "id": 11,
+                "name": "COPY",
+                "label": "COPY"
+            },
+            {
+                "id": 12,
+                "name": "RUN",
+                "label": "RUN"
+            },
+            {
+                "id": 13,
+                "name": "CMD",
+                "label": "CMD"
+            },
+            {
+                "id": 14,
+                "name": "VOLUME",
+                "label": "VOLUME"
+            }
+        ],
+        "available": [
+            {
+                "id": 0,
+                "name": "--",
+                "label": "Choose one associated with your project"
+            },
+            {
+                "id": 1,
+                "name": "javascript",
+                "label": "JavaScript"
+            },
+            {
+                "id": 2,
+                "name": "java",
+                "label": "Java"
+            },
+            {
+                "id": 3,
+                "name": "php",
+                "label": "PHP"
+            },
+            {
+                "id": 4,
+                "name": "python",
+                "label": "Python"
+            },
+            {
+                "id": 5,
+                "name": "others",
+                "label": "Others"
+            },
+            {
+                "id": 6,
+                "name": "ns",
+                "label": "Network Simulator"
+            },
+            {
+                "id": 7,
+                "name": "optimize",
+                "label": "Optimization Algorithm"
+            },
+            {
+                "id": 8,
+                "name": "dcgan",
+                "label": "DCGAN"
+            },
+            {
+                "id": 9,
+                "name": "rnn",
+                "label": "RNN"
+            },
+            {
+                "id": 10,
+                "name": "cnn",
+                "label": "CNN"
+            },
+            {
+                "id": 11,
+                "name": "ffmpeg",
+                "label": "FFmpeg"
+            },
+            {
+                "id": 12,
+                "name": "converter",
+                "label": "Converter"
+            },
+            {
+                "id": 13,
+                "name": "palabos",
+                "label": "Palabos"
+            },
+            {
+                "id": 14,
+                "name": "flow",
+                "label": "Flow"
+            },
+            {
+                "id": 15,
+                "name": "bm",
+                "label": "Blockchain mining"
+            },
+            {
+                "id": 16,
+                "name": "cdet",
+                "label": "Covid-19 detection"
+            },
+            {
+                "id": 17,
+                "name": "cvop",
+                "label": "Covid-19 outbreak prediction"
+            },
+            {
+                "id": 18,
+                "name": "mcr",
+                "label": "Multi Content resizing"
+            },
+            {
+                "id": 19,
+                "name": "mfc",
+                "label": "Multi format changing"
+            }
+        ],
+        "simple": {
+            "javascript": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "nginx:alpine"
+                },
+                {
+                    "id": 2,
+                    "key": "LABEL",
+                    "value": "maintainer=docker-maint@nginx.com"
+                },
+                {
+                    "id": 3,
+                    "key": "ENV",
+                    "value": "NODE_VERSION=1.21.1"
+                },
+                {
+                    "id": 4,
+                    "key": "ENV",
+                    "value": "NJS_VERSION=0.6.1"
+                },
+                {
+                    "id": 5,
+                    "key": "ENV",
+                    "value": "PKG_RELEASE=1"
+                }
+            ],
+            "php": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu:alpine"
+                },
+                {
+                    "id": 2,
+                    "key": "ENV",
+                    "value": "PHP_VERSIN=8.0"
+                },
+                {
+                    "id": 3,
+                    "key": "WORKDIR",
+                    "value": "/usr/src/myapp"
+                },
+                {
+                    "id": 4,
+                    "key": "EXPOSE",
+                    "value": "8000"
+                }
+            ],
+            "java": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu:16.04"
+                },
+                {
+                    "id": 2,
+                    "key": "MAINTAINER",
+                    "value": "Java <clh960524@gmail.com>"
+                },
+                {
+                    "id": 3,
+                    "key": "ENV",
+                    "value": "TEMP_MRCNN_DIR /tmp/mrcnn"
+                },
+                {
+                    "id": 4,
+                    "key": "EXPOSE",
+                    "value": "4404"
+                },
+                {
+                    "id": 5,
+                    "key": "RUN",
+                    "value": "mkdir java"
+                },
+                {
+                    "id": 6,
+                    "key": "WORKDIR",
+                    "value": "/root"
+                },
+                {
+                    "id": 7,
+                    "key": "CMD",
+                    "value": "['/bin/bash']"
+                }
+            ],
+            "python": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "python3.8-slim-buster"
+                },
+                {
+                    "id": 2,
+                    "key": "WORKDIR",
+                    "value": "/app"
+                },
+                {
+                    "id": 3,
+                    "key": "MAINTAINER",
+                    "value": "python-admin@gmail.com"
+                },
+                {
+                    "id": 4,
+                    "key": "EXPOSE",
+                    "value": "8000"
+                }
+            ],
+            "gcc": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "gcc:4.9"
+                },
+                {
+                    "id": 2,
+                    "key": "COPY",
+                    "value": ". /usr/src/myapp"
+                },
+                {
+                    "id": 3,
+                    "key": "WORKDIR",
+                    "value": "/usr/src/myapp"
+                },
+                {
+                    "id": 4,
+                    "key": "RUN",
+                    "value": "gcc -o myapp main.c"
+                },
+                {
+                    "id": 5,
+                    "key": "CMD",
+                    "value": "['./myapp']"
+                }
+            ],
+            "rails": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ruby:2.3"
+                },
+                {
+                    "id": 2,
+                    "key": "RUN",
+                    "value": "apt-get update\" && apt-get install -y --no-install-recommends\" postgresql-client \" && rm -rf /var/lib/apt/lists/*"
+                },
+                {
+                    "id": 3,
+                    "key": "WORKDIR",
+                    "value": "/usr/src/app"
+                },
+                {
+                    "id": 4,
+                    "key": "COPY",
+                    "value": "Gemfile* ./"
+                },
+                {
+                    "id": 5,
+                    "key": "RUN",
+                    "value": "bundle install"
+                },
+                {
+                    "id": 6,
+                    "key": "COPY",
+                    "value": ". ."
+                },
+                {
+                    "id": 7,
+                    "key": "EXPOSE",
+                    "value": "3000"
+                },
+                {
+                    "id": 8,
+                    "key": "CMD",
+                    "value": "['rails', 'server', '-b', '0.0.0.0']"
+                }
+            ],
+            "others": [
+                {
+                    "id": 1,
+                    "key":"FROM",
+                    "value": "xxxxx"
+                },
+                {
+                    "id": 22,
+                    "key":"LABEL",
+                    "value": "xxxxx"
+                }
+            ],
+            "new_user": [
+                {
+                    "id": 1,
+                    "key":"FROM",
+                    "value": "xxxxx"
+                }
+            ],
+            "cnn": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "ffmpeg": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "converter": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "palabos": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "optimize": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "rnn": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "dcgan": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "mcr": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "cvop": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "cdet": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "bm": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ],
+            "flow": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ubuntu"
+                }
+            ]
+
+        },
+        "framework": {
+            "angular": "",
+            "laravel": "",
+            "nodejs": ""
+        }
+    },
+    "networking": {
+        "openform": "",
+        "openpose": ""
+    }
+}

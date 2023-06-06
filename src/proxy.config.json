@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "http://automatic-docker-image.test/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

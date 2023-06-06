@@ -1,0 +1,41 @@
+<!-- <div *ngFor="let project of projects" class="p-chkbox-label">
+    <p-radioButton name="project" [inputId]="project.key" [value]="project" [(ngModel)]="selectedType"
+        (ngModelChange)="onSelectType($event)">
+    </p-radioButton>
+    <label [for]="project.key" class="">{{project.name}}</label>
+</div> -->
+<p-confirmPopup></p-confirmPopup>
+
+
+<h1 class="text-secondary bg-primary text-center">Docker Image Generation ( DIG ) Tool</h1>
+
+<!-- <div class="formgroup-inline">
+    <div class="field-radiobutton" *ngFor="let project of projects">
+        <p-radioButton name="project" [inputId]="project.key" [value]="project" [(ngModel)]="selectedType"
+            (ngModelChange)="onSelectType($event)">
+        </p-radioButton>
+        <label [for]="project.key" class="text-xl font-semi-bold">{{project.name}}</label>
+    </div>
+</div> -->
+
+
+<div class="formgroup-inline">
+    <p-card header="User" subheader="To create without instructions" [style]="{ width: '320px'}" class="mr-5 bg-secondary">
+        <ng-template pTemplate="footer">
+            <p-button label="Click" icon="pi pi-plus" styleClass="p-button-warning" (click)="goToUser()"></p-button>
+        </ng-template>
+    </p-card>
+    
+    <p-card header="Non-User" subheader="To create with instructions" [style]="{ width: '360px'}">
+        <ng-template pTemplate="footer">
+            <p-button label="Click" icon="pi pi-plus" styleClass="p-button-success" (click)="confirmOne($event)"></p-button>
+        </ng-template>
+    </p-card>
+
+    <p-card header="Listing" subheader="Docker Files" [style]="{ width: '320px'}" class="ml-5 bg-secondary">
+        <ng-template pTemplate="footer">
+            <p-button label="Listing" icon="pi pi-directions" styleClass="p-button-help" (click)="goToListing()"></p-button>
+        </ng-template>
+    </p-card>
+
+</div>

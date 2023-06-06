@@ -1,0 +1,335 @@
+{
+    "programming": {
+        "docker_instructions": [
+            {
+                "id": 0,
+                "name": "--",
+                "label": "Choose one docker instruction"
+            },
+            {
+                "id": 1,
+                "name": "ENTRYPOINT",
+                "label": "ENTRYPOINT"
+            },
+            {
+                "id": 2,
+                "name": "ARGS",
+                "label": "ARGS"
+            },
+            {
+                "id": 3,
+                "name": "ENV",
+                "label": "ENV"
+            },
+            {
+                "id": 4,
+                "name": "ADD",
+                "label": "ADD"
+            },
+            {
+                "id": 5,
+                "name": "LABEL",
+                "label": "LABEL"
+            },
+            {
+                "id": 6,
+                "name": "MAINTAINER",
+                "label": "MAINTAINER"
+            },
+            {
+                "id": 7,
+                "name": "USER",
+                "label": "USER"
+            },
+            {
+                "id": 8,
+                "name": "FROM",
+                "label": "FROM"
+            },
+            {
+                "id": 9,
+                "name": "EXPOSE",
+                "label": "EXPOSE"
+            },
+            {
+                "id": 10,
+                "name": "WORKDIR",
+                "label": "WORKDIR"
+            },
+            {
+                "id": 11,
+                "name": "COPY",
+                "label": "COPY"
+            },
+            {
+                "id": 12,
+                "name": "RUN",
+                "label": "RUN"
+            },
+            {
+                "id": 13,
+                "name": "CMD",
+                "label": "CMD"
+            },
+            {
+                "id": 14,
+                "name": "VOLUME",
+                "label": "VOLUME"
+            }
+        ],
+        "available": [
+            {
+                "id": 0,
+                "name": "--",
+                "label": "Choose one associated with your project"
+            },
+            {
+                "id": 1,
+                "name": "javascript",
+                "label": "JavaScript"
+            },
+            {
+                "id": 2,
+                "name": "java",
+                "label": "Java"
+            },
+            {
+                "id": 3,
+                "name": "php",
+                "label": "PHP"
+            },
+            {
+                "id": 4,
+                "name": "python",
+                "label": "Python"
+            },
+            {
+                "id": 5,
+                "name": "others",
+                "label": "Others"
+
+            }
+        ],
+        "simple": {
+            "javascript": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "node:12.18.1"
+                },
+                {
+                    "id": 2,
+                    "key": "ENV",
+                    "value": "NODE_ENV=production"
+                },
+                {
+                    "id": 3,
+                    "key": "WORKDIR",
+                    "value": "/app"
+                },
+                {
+                    "id": 4,
+                    "key": "COPY",
+                    "value": "['package.json', 'package-lock.json*', './']"
+                },
+                {
+                    "id": 5,
+                    "key": "RUN",
+                    "value": "npm install --production"
+                },
+                {
+                    "id": 6,
+                    "key": "COPY@@",
+                    "value": ". ."
+                },
+                {
+                    "id": 7,
+                    "key": "CMD",
+                    "value": "['node', 'server.js']"
+                }
+            ],
+            "php": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "php:7.4-cli"
+                },
+                {
+                    "id": 2,
+                    "key": "COPY",
+                    "value": ". /usr/src/myapp"
+                },
+                {
+                    "id": 3,
+                    "key": "WORKDIR",
+                    "value": "/usr/src/myapp"
+                },
+                {
+                    "id": 4,
+                    "key": "CMD",
+                    "value": "[ 'php', './your-script.php' ]"
+                }
+            ],
+            "java": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "eclipse-temurin:17-jdk-jammy"
+                },
+                {
+                    "id": 2,
+                    "key": "COPY",
+                    "value": "..mvn/ .mvn"
+                },
+                {
+                    "id": 3,
+                    "key": "COPY@",
+                    "value": "mvnw pom.xml ./"
+                },
+                {
+                    "id": 4,
+                    "key": "WORRDIR",
+                    "value": "/usr/src/app"
+                },
+                {
+                    "id": 5,
+                    "key": "RUN",
+                    "value": "./mvnw dependency:resolve"
+                },
+                {
+                    "id": 6,
+                    "key": "COPY@@",
+                    "value": "src ./src"
+                },
+                {
+                    "id": 7,
+                    "key": "CMD",
+                    "value": "['./mvnw', 'spring-boot:run']"
+                }
+            ],
+            "python": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "python3.8-slim-buster"
+                },
+                {
+                    "id": 2,
+                    "key": "WORKDIR",
+                    "value": "/app"
+                },
+                {
+                    "id": 3,
+                    "key": "COPY",
+                    "value": "requirements.txt requirements.txt"
+                },
+                {
+                    "id": 4,
+                    "key": "RUN",
+                    "value": "pip3 install -r requirements.txt"
+                },
+                {
+                    "id": 5,
+                    "key": "COPY@",
+                    "value": ". ."
+                },
+                {
+                    "id": 6,
+                    "key": "CMD",
+                    "value": "['python3', '-m' , 'flask', 'run', '--host=0.0.0.0']"
+                }
+            ],
+            "gcc": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "gcc:4.9"
+                },
+                {
+                    "id": 2,
+                    "key": "COPY",
+                    "value": ". /usr/src/myapp"
+                },
+                {
+                    "id": 3,
+                    "key": "WORKDIR",
+                    "value": "/usr/src/myapp"
+                },
+                {
+                    "id": 4,
+                    "key": "RUN",
+                    "value": "gcc -o myapp main.c"
+                },
+                {
+                    "id": 5,
+                    "key": "CMD",
+                    "value": "['./myapp']"
+                }
+            ],
+            "rails": [
+                {
+                    "id": 1,
+                    "key": "FROM",
+                    "value": "ruby:2.3"
+                },
+                {
+                    "id": 2,
+                    "key": "RUN",
+                    "value": "apt-get update\" && apt-get install -y --no-install-recommends\" postgresql-client \" && rm -rf /var/lib/apt/lists/*"
+                },
+                {
+                    "id": 3,
+                    "key": "WORKDIR",
+                    "value": "/usr/src/app"
+                },
+                {
+                    "id": 4,
+                    "key": "COPY",
+                    "value": "Gemfile* ./"
+                },
+                {
+                    "id": 5,
+                    "key": "RUN",
+                    "value": "bundle install"
+                },
+                {
+                    "id": 6,
+                    "key": "COPY",
+                    "value": ". ."
+                },
+                {
+                    "id": 7,
+                    "key": "EXPOSE",
+                    "value": "3000"
+                },
+                {
+                    "id": 8,
+                    "key": "CMD",
+                    "value": "['rails', 'server', '-b', '0.0.0.0']"
+                }
+            ],
+            "others": [
+                {
+                    "id": 1,
+                    "key":"FROM",
+                    "value": "xxxxx"
+                },
+                {
+                    "id": 22,
+                    "key":"LABEL",
+                    "value": "xxxxx"
+                }
+            ],
+            ""
+        },
+        "framework": {
+            "angular": "",
+            "laravel": "",
+            "nodejs": ""
+        }
+    },
+    "networking": {
+        "openform": "",
+        "openpose": ""
+    }
+}
