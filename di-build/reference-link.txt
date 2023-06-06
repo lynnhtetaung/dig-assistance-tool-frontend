@@ -1,0 +1,19 @@
+CNN - https://hub.docker.com/r/cudachen/mask-rcnn-docker/dockerfile
+Palabos - https://gitlab.com/unigespc/palabos/-/blob/59-add-clang-format-in-ci/docker/Dockerfile
+MongoDB - https://jojozhuang.github.io/programming/creating-mongodb-image-with-dockerfile/
+Ruby - https://earthly.dev/blog/rails-with-docker/
+Apache - https://hub.docker.com/_/httpd/tags
+Flutter - https://blog.codemagic.io/how-to-dockerize-flutter-apps/
+ReactNative - https://medium.com/in-the-pocket-insights/upgrading-our-app-build-process-eaff34f7f2e8
+PostgreSQL - https://1kevinson.com/how-to-create-a-postgres-database-in-docker/
+
+Vue-
+Angular-
+Laravel-
+ASP.Net-
+Svelte-
+SpringBoot-
+Tornado-
+GCC-
+CakePHP
+NS3-

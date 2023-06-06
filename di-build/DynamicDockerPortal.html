@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:4200/docker_manage/listing -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>DynamicDockerPortal</title>
+  <!-- <base href="../../dynamic-docker-portal/"> -->
+  <!--<base href="/">--><base href=".">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+<link rel="stylesheet" href="./DynamicDockerPortal_files/styles.css"><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */</style><style>.p-confirm-popup{position:absolute;margin-top:10px;top:0;left:0}.p-confirm-popup-flipped{margin-top:0;margin-bottom:10px}.p-confirm-popup:after,.p-confirm-popup:before{bottom:100%;left:calc(var(--overlayArrowLeft, 0) + 1.25rem);content:" ";height:0;width:0;position:absolute;pointer-events:none}.p-confirm-popup:after{border-width:8px;margin-left:-8px}.p-confirm-popup:before{border-width:10px;margin-left:-10px}.p-confirm-popup-flipped:after,.p-confirm-popup-flipped:before{bottom:auto;top:100%}.p-confirm-popup.p-confirm-popup-flipped:after{border-bottom-color:transparent}.p-confirm-popup.p-confirm-popup-flipped:before{border-bottom-color:transparent}.p-confirm-popup .p-confirm-popup-content{display:flex;align-items:center}
+</style><style>.p-datatable{position:relative}.p-datatable table{border-collapse:collapse;min-width:100%;table-layout:fixed}.p-datatable .p-sortable-column{cursor:pointer;-webkit-user-select:none;user-select:none}.p-datatable .p-sortable-column .p-column-title,.p-datatable .p-sortable-column .p-sortable-column-icon,.p-datatable .p-sortable-column .p-sortable-column-badge{vertical-align:middle}.p-datatable .p-sortable-column .p-sortable-column-badge{display:inline-flex;align-items:center;justify-content:center}.p-datatable-auto-layout>.p-datatable-wrapper{overflow-x:auto}.p-datatable-auto-layout>.p-datatable-wrapper>table{table-layout:auto}.p-datatable-responsive-scroll>.p-datatable-wrapper{overflow-x:auto}.p-datatable-responsive-scroll>.p-datatable-wrapper>table,.p-datatable-auto-layout>.p-datatable-wrapper>table{table-layout:auto}.p-datatable-hoverable-rows .p-selectable-row{cursor:pointer}.p-datatable-scrollable .p-datatable-wrapper{position:relative;overflow:auto}.p-datatable-scrollable .p-datatable-thead,.p-datatable-scrollable .p-datatable-tbody,.p-datatable-scrollable .p-datatable-tfoot{display:block}.p-datatable-scrollable .p-datatable-thead>tr,.p-datatable-scrollable .p-datatable-tbody>tr,.p-datatable-scrollable .p-datatable-tfoot>tr{display:flex;flex-wrap:nowrap;width:100%}.p-datatable-scrollable .p-datatable-thead>tr>th,.p-datatable-scrollable .p-datatable-tbody>tr>td,.p-datatable-scrollable .p-datatable-tfoot>tr>td{display:flex;flex:1 1 0;align-items:center}.p-datatable-scrollable>.p-datatable-wrapper>.p-datatable-table>.p-datatable-thead,.p-datatable-scrollable>.p-datatable-wrapper>.p-scroller-viewport>.p-scroller>.p-datatable-table>.p-datatable-thead{position:sticky;top:0;z-index:1}.p-datatable-scrollable>.p-datatable-wrapper>.p-datatable-table>.p-datatable-frozen-tbody{position:sticky;z-index:1}.p-datatable-scrollable>.p-datatable-wrapper>.p-datatable-table>.p-datatable-tfoot{position:sticky;bottom:0;z-index:1}.p-datatable-scrollable .p-frozen-column{position:sticky;background:inherit}.p-datatable-scrollable th.p-frozen-column{z-index:1}.p-datatable-scrollable-both .p-datatable-thead>tr>th,.p-datatable-scrollable-both .p-datatable-tbody>tr>td,.p-datatable-scrollable-both .p-datatable-tfoot>tr>td,.p-datatable-scrollable-horizontal .p-datatable-thead>tr>th .p-datatable-scrollable-horizontal .p-datatable-tbody>tr>td,.p-datatable-scrollable-horizontal .p-datatable-tfoot>tr>td{flex:0 0 auto}.p-datatable-flex-scrollable{display:flex;flex-direction:column;height:100%}.p-datatable-flex-scrollable .p-datatable-wrapper{display:flex;flex-direction:column;flex:1;height:100%}.p-datatable-scrollable .p-rowgroup-header{position:sticky;z-index:1}.p-datatable-scrollable.p-datatable-grouped-header .p-datatable-thead,.p-datatable-scrollable.p-datatable-grouped-footer .p-datatable-tfoot{display:table;border-collapse:collapse;width:100%;table-layout:fixed}.p-datatable-scrollable.p-datatable-grouped-header .p-datatable-thead>tr,.p-datatable-scrollable.p-datatable-grouped-footer .p-datatable-tfoot>tr{display:table-row}.p-datatable-scrollable.p-datatable-grouped-header .p-datatable-thead>tr>th,.p-datatable-scrollable.p-datatable-grouped-footer .p-datatable-tfoot>tr>td{display:table-cell}.p-datatable-scrollable .p-scroller>.p-datatable-table{display:inline-block}.p-datatable-flex-scrollable{display:flex;flex-direction:column;flex:1;height:100%}.p-datatable-flex-scrollable .p-datatable-virtual-scrollable-body{flex:1}.p-datatable-resizable>.p-datatable-wrapper{overflow-x:auto}.p-datatable-resizable .p-datatable-thead>tr>th,.p-datatable-resizable .p-datatable-tfoot>tr>td,.p-datatable-resizable .p-datatable-tbody>tr>td{overflow:hidden;white-space:nowrap}.p-datatable-resizable .p-resizable-column:not(.p-frozen-column){background-clip:padding-box;position:relative}.p-datatable-resizable-fit .p-resizable-column:last-child .p-column-resizer{display:none}.p-datatable .p-column-resizer{display:block;position:absolute!important;top:0;right:0;margin:0;width:.5rem;height:100%;padding:0;cursor:col-resize;border:1px solid transparent}.p-datatable .p-column-resizer-helper{width:1px;position:absolute;z-index:10;display:none}.p-datatable .p-row-editor-init,.p-datatable .p-row-editor-save,.p-datatable .p-row-editor-cancel,.p-datatable .p-row-toggler{display:inline-flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.p-datatable-reorder-indicator-up,.p-datatable-reorder-indicator-down{position:absolute;display:none}.p-datatable-reorderablerow-handle,[pReorderableColumn]{cursor:move}.p-datatable .p-datatable-loading-overlay{position:absolute;display:flex;align-items:center;justify-content:center;z-index:2}.p-column-filter-row{display:flex;align-items:center;width:100%}.p-column-filter-menu{display:inline-flex}.p-column-filter-row p-columnfilterformelement{flex:1 1 auto;width:1%}.p-column-filter-menu-button,.p-column-filter-clear-button{display:inline-flex;justify-content:center;align-items:center;cursor:pointer;text-decoration:none;overflow:hidden;position:relative}.p-column-filter-overlay{position:absolute;top:0;left:0}.p-column-filter-row-items{margin:0;padding:0;list-style:none}.p-column-filter-row-item{cursor:pointer}.p-column-filter-add-button,.p-column-filter-remove-button{justify-content:center}.p-column-filter-add-button .p-button-label,.p-column-filter-remove-button .p-button-label{flex-grow:0}.p-column-filter-buttonbar{display:flex;align-items:center;justify-content:space-between}.p-column-filter-buttonbar .p-button{width:auto}.p-datatable .p-datatable-tbody>tr>td>.p-column-title{display:none}.p-datatable .p-scroller-loading{transform:none!important;min-height:0;position:sticky;top:0;left:0}
+</style><style type="text/css">
+@media screen and (max-width: 960px) {
+    #pr_id_1 .p-datatable-thead > tr > th,
+    #pr_id_1 .p-datatable-tfoot > tr > td {
+        display: none !important;
+    }
+
+    #pr_id_1 .p-datatable-tbody > tr > td {
+        display: flex;
+        width: 100% !important;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #pr_id_1 .p-datatable-tbody > tr > td:not(:last-child) {
+        border: 0 none;
+    }
+
+    #pr_id_1.p-datatable-gridlines .p-datatable-tbody > tr > td:last-child {
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+
+    #pr_id_1 .p-datatable-tbody > tr > td > .p-column-title {
+        display: block;
+    }
+}
+</style><style>.p-paginator{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}.p-paginator-left-content{margin-right:auto}.p-paginator-right-content{margin-left:auto}.p-paginator-page,.p-paginator-next,.p-paginator-last,.p-paginator-first,.p-paginator-prev,.p-paginator-current{cursor:pointer;display:inline-flex;align-items:center;justify-content:center;line-height:1;-webkit-user-select:none;user-select:none;overflow:hidden;position:relative}.p-paginator-element:focus{z-index:1;position:relative}
+</style><style>.p-dropdown{display:inline-flex;cursor:pointer;position:relative;-webkit-user-select:none;user-select:none}.p-dropdown-clear-icon{position:absolute;top:50%;margin-top:-.5rem}.p-dropdown-trigger{display:flex;align-items:center;justify-content:center;flex-shrink:0}.p-dropdown-label{display:block;white-space:nowrap;overflow:hidden;flex:1 1 auto;width:1%;text-overflow:ellipsis;cursor:pointer}.p-dropdown-label-empty{overflow:hidden;visibility:hidden}input.p-dropdown-label{cursor:default}.p-dropdown .p-dropdown-panel{min-width:100%}.p-dropdown-panel{position:absolute;top:0;left:0}.p-dropdown-items-wrapper{overflow:auto}.p-dropdown-item{cursor:pointer;font-weight:400;white-space:nowrap;position:relative;overflow:hidden}.p-dropdown-items{margin:0;padding:0;list-style-type:none}.p-dropdown-filter{width:100%}.p-dropdown-filter-container{position:relative}.p-dropdown-filter-icon{position:absolute;top:50%;margin-top:-.5rem}.p-fluid .p-dropdown{display:flex}.p-fluid .p-dropdown .p-dropdown-label{width:1%}
+</style></head>
+<body>
+  <app-root _nghost-mxh-c16="" ng-version="14.1.0"><router-outlet _ngcontent-mxh-c16=""></router-outlet><app-docker-listing class="ng-star-inserted"><h1>DockerFile Listing</h1><p-confirmpopup class="p-element ng-tns-c94-0 ng-star-inserted"><!--bindings={}--></p-confirmpopup><div class="field col-12 md:col-12"><button pbutton="" type="button" label="+ Create" class="p-element mt-3 p-button-success p-button p-component" ng-reflect-label="+ Create"><span class="p-button-label">+ Create</span></button></div><p-table currentpagereporttemplate="Showing {first} to {last} of {totalRecords} entries" class="p-element" ng-reflect-current-page-report-template="Showing {first} to {last} of {" ng-reflect-paginator="true" ng-reflect-rows="10" ng-reflect-show-current-page-report="true" ng-reflect-rows-per-page-options="10,25,50" ng-reflect-value="[object Object],[object Object"><div ng-reflect-ng-class="[object Object]" id="pr_id_1" class="p-datatable p-component p-datatable-responsive-stack"><!--bindings={}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div class="p-datatable-wrapper" ng-reflect-ng-style="[object Object]"><!--bindings={}--><table role="table" class="p-datatable-table ng-star-inserted" id="pr_id_1-table"><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><thead class="p-datatable-thead"><tr class="ng-star-inserted"><th class="ng-star-inserted"> ID </th><th class="ng-star-inserted"> Name </th><th class="ng-star-inserted"> Description </th><th class="ng-star-inserted"> Status </th><th class="ng-star-inserted"> Action </th><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--></thead><!--bindings={}--><tbody class="p-element p-datatable-tbody" ng-reflect-value="[object Object],[object Object" ng-reflect-template="[object Object]" ng-reflect-scroller-options="[object Object]"><!--bindings={}--><tr class="ng-star-inserted"><td>1</td><td>test1</td><td>testing 1</td><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><td class="ng-star-inserted"><button pbutton="" pripple="" type="button" label="pushed" class="p-element p-button-rounded p-button-outlined p-button-success p-button p-component" ng-reflect-label="pushed"><span class="p-button-label">pushed</span></button><p id="demo"></p></td><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><td><button pbutton="" pripple="" type="button" label="detail" class="p-element p-button-rounded p-button-primary p-button p-component" ng-reflect-label="detail"><span class="p-button-label">detail</span></button> | <button pbutton="" pripple="" type="button" label="delete" class="p-element p-button-rounded p-button-error p-button p-component" ng-reflect-label="delete"><span class="p-button-label">delete</span></button></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr class="ng-star-inserted"><td>2</td><td>test2</td><td>22</td><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><td class="ng-star-inserted"><button pbutton="" pripple="" type="button" label="pushed" class="p-element p-button-rounded p-button-outlined p-button-success p-button p-component" ng-reflect-label="pushed"><span class="p-button-label">pushed</span></button><p id="demo"></p></td><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><td><button pbutton="" pripple="" type="button" label="detail" class="p-element p-button-rounded p-button-primary p-button p-component" ng-reflect-label="detail"><span class="p-button-label">detail</span></button> | <button pbutton="" pripple="" type="button" label="delete" class="p-element p-button-rounded p-button-error p-button p-component" ng-reflect-label="delete"><span class="p-button-label">delete</span></button></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr class="ng-star-inserted"><td>3</td><td>Nodejs</td><td>Nodejsproject</td><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><td class="ng-star-inserted"><button pbutton="" pripple="" type="button" label="pushed" class="p-element p-button-rounded p-button-outlined p-button-success p-button p-component" ng-reflect-label="pushed"><span class="p-button-label">pushed</span></button><p id="demo"></p></td><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><td><button pbutton="" pripple="" type="button" label="detail" class="p-element p-button-rounded p-button-primary p-button p-component" ng-reflect-label="detail"><span class="p-button-label">detail</span></button> | <button pbutton="" pripple="" type="button" label="delete" class="p-element p-button-rounded p-button-error p-button p-component" ng-reflect-label="delete"><span class="p-button-label">delete</span></button></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr class="ng-star-inserted"><td>4</td><td>Test4</td><td>Testproject</td><td class="ng-star-inserted"><button pbutton="" pripple="" type="button" label="ready" class="p-element p-button-rounded p-button-outlined p-button-danger p-button p-component" ng-reflect-label="ready"><span class="p-button-label">ready</span></button></td><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><td><button pbutton="" pripple="" type="button" label="detail" class="p-element p-button-rounded p-button-primary p-button p-component" ng-reflect-label="detail"><span class="p-button-label">detail</span></button> | <button pbutton="" pripple="" type="button" label="delete" class="p-element p-button-rounded p-button-error p-button p-component" ng-reflect-label="delete"><span class="p-button-label">delete</span></button></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr class="ng-star-inserted"><td>5</td><td>Test5</td><td>T5</td><td class="ng-star-inserted"><button pbutton="" pripple="" type="button" label="ready" class="p-element p-button-rounded p-button-outlined p-button-danger p-button p-component" ng-reflect-label="ready"><span class="p-button-label">ready</span></button></td><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><td><button pbutton="" pripple="" type="button" label="detail" class="p-element p-button-rounded p-button-primary p-button p-component" ng-reflect-label="detail"><span class="p-button-label">detail</span></button> | <button pbutton="" pripple="" type="button" label="delete" class="p-element p-button-rounded p-button-error p-button p-component" ng-reflect-label="delete"><span class="p-button-label">delete</span></button></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></tbody><!--bindings={}--></table><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--container--></div><p-paginator styleclass="p-paginator-bottom" class="p-element ng-star-inserted" ng-reflect-style-class="p-paginator-bottom" ng-reflect-rows="10" ng-reflect-first="0" ng-reflect-total-records="5" ng-reflect-page-link-size="5" ng-reflect-always-show="true" ng-reflect-rows-per-page-options="10,25,50" ng-reflect-dropdown-scroll-height="200px" ng-reflect-current-page-report-template="Showing {first} to {last} of {" ng-reflect-show-first-last-icon="true" ng-reflect-show-current-page-report="true" ng-reflect-show-page-links="true"><div class="p-paginator-bottom p-paginator p-component ng-star-inserted" ng-reflect-ng-class="p-paginator p-component"><!--bindings={}--><span class="p-paginator-current ng-star-inserted">Showing 1 to 5 of 5 entries</span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><button type="button" pripple="" class="p-ripple p-element p-paginator-first p-paginator-element p-link p-disabled ng-star-inserted" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-double-left"></span></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><button type="button" pripple="" class="p-ripple p-element p-paginator-prev p-paginator-element p-link p-disabled" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-left"></span></button><span class="p-paginator-pages ng-star-inserted"><button type="button" pripple="" class="p-ripple p-element p-paginator-page p-paginator-element p-link p-highlight ng-star-inserted" ng-reflect-ng-class="[object Object]">1</button><!--bindings={
+  "ng-reflect-ng-for-of": "1"
+}--></span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><button type="button" pripple="" class="p-ripple p-element p-paginator-next p-paginator-element p-link p-disabled" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-right"></span></button><button type="button" pripple="" class="p-ripple p-element p-paginator-last p-paginator-element p-link p-disabled ng-star-inserted" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-double-right"></span></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><p-dropdown styleclass="p-paginator-rpp-options" class="p-element p-inputwrapper ng-tns-c57-1 p-inputwrapper-filled ng-untouched ng-pristine ng-star-inserted ng-valid" ng-reflect-style-class="p-paginator-rpp-options" ng-reflect-options="[object Object],[object Object" ng-reflect-model="10" ng-reflect-disabled="false" ng-reflect-is-disabled="false" ng-reflect-scroll-height="200px"><div class="ng-tns-c57-1 p-paginator-rpp-options p-dropdown p-component" ng-reflect-ng-class="[object Object]"><div class="p-hidden-accessible ng-tns-c57-1"><input type="text" readonly="" aria-haspopup="listbox" role="combobox" class="ng-tns-c57-1" aria-expanded="false"></div><span class="p-element ng-tns-c57-1 p-dropdown-label p-inputtext ng-star-inserted" ng-reflect-ng-class="[object Object]" ng-reflect-text="" ng-reflect-tooltip-position="right" ng-reflect-position-style="absolute" id="pr_id_2_label">10<!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--></span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><div role="button" aria-label="dropdown trigger" aria-haspopup="listbox" class="p-dropdown-trigger ng-tns-c57-1"><span class="p-dropdown-trigger-icon ng-tns-c57-1 pi pi-chevron-down" ng-reflect-ng-class="pi pi-chevron-down"></span></div><!--bindings={}--></div></p-dropdown><!--bindings={
+  "ng-reflect-ng-if": "10,25,50"
+}--><!--bindings={}--></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></p-paginator><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={}--></div></p-table></app-docker-listing><!--container--></app-root>
+<script src="./DynamicDockerPortal_files/runtime.js" type="module"></script><script src="./DynamicDockerPortal_files/polyfills.js" type="module"></script><script src="./DynamicDockerPortal_files/styles.js" defer=""></script><script src="./DynamicDockerPortal_files/vendor.js" type="module"></script><script src="./DynamicDockerPortal_files/main.js" type="module"></script>
+
+</body></html>
