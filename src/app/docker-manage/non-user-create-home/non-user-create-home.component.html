@@ -1,38 +1,30 @@
-<h1 class="text-secondary bg-primary text-center">Select the programming language</h1>
+<h1 class="text-secondary bg-primary text-center">Select your project's programming language</h1>
 
 
 <div class="formgroup-inline">
 
-    <p-card header="C++" subheader="C++ programming" [style]="{ width: '320px'}" class="mr-5 bg-secondary">
-        <ng-template pTemplate="footer">
-            <p-button label="Go To Form" icon="pi pi-directions" styleClass="p-button-warning" (click)="goToC()"></p-button>
-        </ng-template>
+    <p-card header="C++" subheader="C++ programming" [style]="{ width: '300px'}" class="text-danger mr-4">
+        <p-button label="Go To Form" styleClass="p-button-warning" (click)="goToC()"></p-button>
     </p-card>
     
-    <p-card header="Java" subheader="Java programming" [style]="{ width: '360px'}">
-        <ng-template pTemplate="footer">
-            <p-button label="Go To Form" icon="pi pi-directions" styleClass="p-button-success" (click)="goToJava()"></p-button>
-        </ng-template>
+    <p-card header="Java" subheader="Java programming" [style]="{ width: '300px'}" class="mr-4">
+        <p-button label="Go To Form" styleClass="p-button-success" (click)="goToJava()"></p-button>
     </p-card>
 
-    <p-card header="Python" subheader="Python programming" [style]="{ width: '320px'}" class="ml-5 bg-secondary">
-        <ng-template pTemplate="footer">
-            <p-button label="Go To Form" icon="pi pi-directions" styleClass="p-button-danger" (click)="goToPython()"></p-button>
-        </ng-template>
+    <p-card header="Python" subheader="Python programming" [style]="{ width: '300px'}" class="bg-secondary mr-4">
+        <p-button label="Go To Form" styleClass="p-button-info" (click)="goToPython()"></p-button>
     </p-card>
 
-    <p-card header="JavaScript" subheader="JavaScript programming" [style]="{ width: '320px'}" class="ml-5 bg-secondary">
-        <ng-template pTemplate="footer">
-            <p-button label="Go To Form" icon="pi pi-directions" styleClass="p-button-info" (click)="goToJavaScript()"></p-button>
-        </ng-template>
+    <p-card header="JavaScript" subheader="JavaScript programming" [style]="{ width: '300px'}" class="bg-secondary mr-4">
+        <p-button label="Go To Form" styleClass="p-button-help" (click)="goToJavaScript()"></p-button>
     </p-card>
 
-    <p-card header="Others" subheader="Other programming" [style]="{ width: '320px'}" class="ml-5 bg-secondary">
-        <ng-template pTemplate="footer">
-            <p-button label="Go To Form" icon="pi pi-directions" styleClass="p-button-help" (click)="goToOther()"></p-button>
-        </ng-template>
+</div>
+
+<div class="formgroup-inline mt-4">
+
+    <p-card header="Others" subheader="Other programming" [style]="{ width: '300px'}" class="bg-secondary">
+        <p-button label="Go To Form" styleClass="p-button-danger" (click)="goToOther()"></p-button>
     </p-card>
-
-
 
 </div>

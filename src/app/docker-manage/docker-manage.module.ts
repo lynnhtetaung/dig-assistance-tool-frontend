@@ -18,6 +18,7 @@ import { NonUserCreateComponent } from "./non-user-create/non-user-create.compon
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { NonUserUpdateComponent } from "./non-user-update/non-user-update.component";
 import { NonUserCreateHomeComponent } from "./non-user-create-home/non-user-create-home.component";
+import {TooltipModule} from 'primeng/tooltip';
 
 const PrimeNGModules = [
     RadioButtonModule,
@@ -28,6 +29,7 @@ const PrimeNGModules = [
     ConfirmPopupModule,
     ToastModule,
     AutoCompleteModule,
+    TooltipModule
 ];
 
 @NgModule({

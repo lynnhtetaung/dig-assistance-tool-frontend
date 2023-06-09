@@ -4,84 +4,157 @@
 
     <form [formGroup]="nonUserCreateForm">
 
-        <!-- <div class="field col-12 md:col-3">
-            <label for="programmings" class="text-xl font-semi-bold">Programmings</label><br>
-            <p-autoComplete formControlName="programmings" [suggestions]="filteredCountries"
-                (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
-                <ng-template let-country pTemplate="item">
-                    <div class="country-item">
-                        <div>{{country.name}}</div>
-                    </div>
-                </ng-template>
-            </p-autoComplete>this._router.navigate(['docker_manage/non_user_update'], { queryParams: { type: 'update'} });
-            
-        </div> -->
-
-
-        <div class="field col-12 md:col-3">
+        <div class="field col-12 md:col-5">
             <label for="dependency_file" class="text-xl font-semi-bold">Dependency file</label>
             <input type="file" id="filepicker" name="fileList" (change)="uploadDependencyFile($event)"
                 formControlName="dependency_file" class="text-base text-color border-1 border-solid surface-overlay p-2 surface-border border-round apperance-none outline-none focus:border-primary w-full"/>
         </div>
 
-        <div class="field col-12 md:col-3">
-            <label for="programmings" class="text-xl font-semi-bold">Version</label>
-            <input type="text" formControlName="version"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round apperance-none outline-none focus:border-primary w-full"
-                required>
+        <!-- <div class="field col-12 md:col-5">
+            <label for="new-docker-instruction" class="text-xl font-semi-bold">New Docker Instruction</label><br>
+            <p-dropdown [options]="newDockerInstructions" optionLabel="label" optionValue="name"
+                (onChange)="onSelectNewUserInstruction($event.value)">
+            </p-dropdown>
+        </div> -->
+
+        <div *ngIf="!isOther">
+            <div class="field col-12 md:col-5">
+                <label for="fromInstruction" class="text-xl font-semi-bold">FROM</label><br>
+                <p-autoComplete formControlName="from" [suggestions]="filteredfromInstructions"
+                    (completeMethod)="filterFROM($event)" field="name" [dropdown]="true" pTooltip="Enter your base image">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+    
+            <div class="field col-12 md:col-5">
+                <label for="maintainerInstruction" class="text-xl font-semi-bold">MAINTAINER</label><br>
+                <p-autoComplete formControlName="maintainer" [suggestions]="filteredmaintainerInstructions"
+                    (completeMethod)="filterMAINTAINER($event)" field="name" [dropdown]="true" pTooltip="Enter your email">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+    
+            <div class="field col-12 md:col-5">
+                <label for="runMainInstruction" class="text-xl font-semi-bold">RUN</label><br>
+                <p-autoComplete formControlName="run_main" [suggestions]="filteredrunMainInstructions"
+                    (completeMethod)="filterRUNMAIN($event)" field="name" [dropdown]="true" pTooltip="To install your application">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+    
+            <div class="field col-12 md:col-5">
+                <label for="workdirInstruction" class="text-xl font-semi-bold">WORKDIR</label><br>
+                <p-autoComplete formControlName="workdir" [suggestions]="filteredworkdirInstructions"
+                    (completeMethod)="filterWORKDIR($event)" field="name" [dropdown]="true" pTooltip="To create project directory">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+    
+            <div class="field col-12 md:col-5">
+                <label for="copyInstruction" class="text-xl font-semi-bold">COPY</label><br>
+                <p-autoComplete formControlName="copy" [suggestions]="filteredcopyInstructions"
+                    (completeMethod)="filterCOPY($event)" field="name" [dropdown]="true" pTooltip="To copy your project directory to docker image">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+    
+            <div class="field col-12 md:col-5">
+                <label for="runDependencyInstruction" class="text-xl font-semi-bold">RUN</label><br>
+                <p-autoComplete formControlName="run_dependency" [suggestions]="filteredrunDependencyInstructions"
+                    (completeMethod)="filterRUNDEPENDENCY($event)" field="name" [dropdown]="true" pTooltip="To install your dependency file">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+    
+            <div class="field col-12 md:col-5">
+                <label for="exposeInstruction" class="text-xl font-semi-bold">EXPOSE</label><br>
+                <p-autoComplete formControlName="expose" [suggestions]="filteredexposeInstructions" 
+                    (completeMethod)="filterEXPOSE($event)" field="name" [dropdown]="true" pTooltip="To set your application port number">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+    
+            <div class="field col-12 md:col-5">
+                <label for="cmdInstruction" class="text-xl font-semi-bold">CMD</label><br>
+                <p-autoComplete formControlName="cmd" [suggestions]="filteredcmdInstructions"
+                    (completeMethod)="filterCMD($event)" field="name" [dropdown]="true" pTooltip="To start the application running">
+                    <ng-template let-country pTemplate="item">
+                        <div class="country-item">
+                            <div>{{country.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
         </div>
 
-        <!-- <div class="field col-12 md:col-3">
+        <div *ngIf="isOther">
+            
+            <div class="field col-12 md:col-8">
+                <label for="from" class="text-xl font-semi-bold">Please find suitable Docker file for your project in
+                <a href="https://chat.openai.com" target="_blank" style="font-size: large; font-weight: semi-bold; color: blue">ChatGPT</a> (or)
+                <a href="https://www.google.com" target="_blank" style="font-size: large; font-weight: semi-bold; color: red">Google</a>
+            </label>
+            </div>
+
+            <div class="field col-12 md:col-3">
+                <label for="from" class="text-xl font-semi-bold">FROM</label>
+                <p-autoComplete formControlName="from" [suggestions]="filteredfromInstructions"
+                (completeMethod)="filterFROM($event)" field="name" pTooltip="Enter your base image">
+                <ng-template let-country pTemplate="item">
+                    <div class="country-item">
+                        <div>{{country.name}}</div>
+                    </div>
+                </ng-template>
+            </p-autoComplete>
+            </div>
+        </div>
+       
+
+        <div class="field col-12 md:col-5">
+            <button pButton type="button" icon="pi pi-save" label="Generate Docker File" class="mt-3 mr-5"
+                (click)="createDockerFile()" [disabled]="!nonUserCreateForm.valid || disableButton"></button>
+            <!-- <button pButton type="button" icon="pi pi-list" label="Go To Listing >" class="mt-3 p-button-warning"
+                (click)="goToListing()">
+            </button> -->
+        </div>
+
+    </form>
+
+</div>
+
+<!-- <div class="field col-12 md:col-3">
             <label for="programming" class="text-xl font-semi-bold">Project Folder</label><br>
             <input type="file" id="filepicker" name="fileList" (change)="triggerNewProblem($event)"
                 formControlName="project_folder" class="text-base text-color border-1 border-solid surface-overlay p-2 surface-border border-round apperance-none outline-none focus:border-primary w-full" webkitdirectory multiple />
             <ul id="listing"></ul>
         </div> -->
 
-        <div class="field col-12 md:col-3">
-            <label for="programmings" class="text-xl font-semi-bold">Run 1</label>
-            <input type="text" formControlName="run_one"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round apperance-none outline-none focus:border-primary w-full"
-                required>
-        </div>
-
-        <div class="field col-12 md:col-3">
-            <label for="programming" class="text-xl font-semi-bold">Environment</label><br>
-            <input type="text" formControlName="env"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round apperance-none outline-none focus:border-primary w-full"
-                required>
-        </div>
-
-        <div class="field col-12 md:col-3">
-            <label for="programmings" class="text-xl font-semi-bold">Run 2</label>
-            <input type="text" formControlName="run_two"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round apperance-none outline-none focus:border-primary w-full"
-                required>
-        </div>
-
-        <div class="field col-12 md:col-3">
-            <label for="programming" class="text-xl font-semi-bold">Expose</label><br>
-            <input type="text" formControlName="expose"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round apperance-none outline-none focus:border-primary w-full"
-                required>
-        </div>
-
-        <div class="field col-12 md:col-3">
-            <label for="programming" class="text-xl font-semi-bold">Cmd</label><br>
-            <input type="text" formControlName="cmd"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round apperance-none outline-none focus:border-primary w-full"
-                required>
-        </div>
-
-
-
-        <div class="field col-12 md:col-3">
-            <button pButton type="button" icon="pi pi-download" label="Generate" class="mt-3 mr-5"
-                (click)="createDockerFile()" [disabled]="!nonUserCreateForm.valid || disableButton"></button>
-            <button pButton type="button" icon="pi pi-list" label="Go To Listing >" class="mt-3 p-button-warning"
-                (click)="goToListing()"></button>
-        </div>
-
-    </form>
-
-</div>
+        

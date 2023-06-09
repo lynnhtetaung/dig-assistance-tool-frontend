@@ -471,5 +471,244 @@
     "networking": {
         "openform": "",
         "openpose": ""
+    },
+    "instructions": {
+        "from": { 
+            "java" : [
+                {
+                    "name": "openjdk"
+                },
+                {
+                    "name": "openjdk:8"
+                },
+                {
+                    "name": "openjdk:11"
+                },
+                {
+                    "name": "openjdk:latest"
+                },
+                {
+                    "name": "adoptopenjdk:8-jdk-hot-pot"
+                },
+                {
+                    "name": "adoptopenjdk:11-jdk-openj9"
+                },
+                {
+                    "name": "adoptopenjdk:16-jdk-hot-pot"
+                },
+                {"name":"oraclelinux:8"},
+                {"name":"oraclelinux:latest"},
+                {"name":"centos"},
+                {"name":"centos:8"},
+                {"name":"centos:latest"}
+            ],
+            "javascript": [
+                {"name":"node:latest"},
+                {"name":"node:alpine"},
+                {"name":"ubuntu"},
+                {"name":"debian"},
+                {"name":"alpine"}
+            ],
+            "c": [
+                {"name":"ubuntu:latest"},
+                {"name":"debian:latest"},
+                {"name":"alpine:latest"},
+                {"name":"buildpack-deps:buster"},
+                {"name":"buildpack-deps:bullseye"}
+            ],
+            "python": [
+                {"name":"python:latest"},
+                {"name":"python:alpine"},
+                {"name":"python:slim"},
+                {"name":"buildpack-deps:buster"},
+                {"name":"buildpack-deps:bullseye"}
+            ],
+            "php": [
+                {"name":"php:latest"},
+                {"name":"php:apache"},
+                {"name":"php:fpm"},
+                {"name":"ubuntu"},
+                {"name":"debian"},
+                {"name":"alpine"}
+            ],
+            "ruby": [
+                {"name":"ruby:latest"},
+                {"name":"ruby:slim"},
+                {"name":"ruby:alpine"},
+                {"name":"ubuntu"},
+                {"name":"debian"},
+                {"name":"alpine"}
+            ],
+            "golang": [
+                {"name": "golang:latest"},
+                {"name": "golang:alpine"},
+                {"name": "ubuntu"},
+                {"name": "debian"},
+                {"name": "apline"}
+            ]
+        },
+        "maintainer": {
+            "email": [
+                {
+                    "name": "lynnhtetaung@s.okayama-u.ac.jp"
+                }
+            ]
+        },
+        "run_main": {
+            "java": [
+            {
+                "name": "apt-get install -y openjdk-11-jdk"
+            }
+            ],
+            "javascript": [
+            {
+                "name": "apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install -y nodejs"
+            }
+            ],
+            "python": [
+            {
+                "name": "apt-get update && apt-get install -y python3"
+            }
+            ],
+            "c": [
+                {
+                    "name": ""
+                }
+            ],
+            "ruby": [
+                {
+                    "name": ""
+                }
+            ],
+            "golang": [
+                {
+                    "name": ""
+                }
+            ],
+            "php": [
+                {
+                    "name": ""
+                }
+            ]
+        },
+        "workdir": {
+            "java": [
+                {
+                    "name": ""
+                }
+                ],
+                "javascript": [
+                {
+                    "name": "/usr/src/app"
+                }
+                ],
+                "php": [
+                    {
+                        "name": "/var/www/html"
+                    }
+                ]
+        },
+        "copy": {
+            "java": [
+                {
+                    "name": ""
+                }
+                ],
+                "javascript": [
+                {
+                    "name": ". /usr/src/app"
+                }
+            ]
+        },
+        "run_dependency": {
+            "java": [
+                {
+                    "name": ""
+                }
+                ],
+                "javascript": [
+                {
+                    "name": "npm install"
+                }
+                ],
+                "python": [
+                {
+                    "name": "pip install"
+                }
+                ],
+                "c": [
+                    {
+                        "name": ""
+                    }
+                ],
+                "ruby": [
+                    {
+                        "name": "gem install"
+                    }
+                ],
+                "golang": [
+                    {
+                        "name": ""
+                    }
+                ],
+                "php": [
+                    {
+                        "name": "composer install"
+                    }
+                ]
+        },
+        "expose": {
+            "port": [
+                {
+                    "name": "2000"
+                },
+                {
+                    "name": "3000"
+                },
+                {
+                    "name": "4200"
+                },
+                {
+                    "name": "8000"
+                }
+            ]
+        },
+        "cmd": {
+            "java": [
+                {
+                    "name": ""
+                }
+                ],
+                "javascript": [
+                {
+                    "name": "['npm', 'start']"
+                }
+                ],
+                "python": [
+                {
+                    "name": "pip install"
+                }
+                ],
+                "c": [
+                    {
+                        "name": ""
+                    }
+                ],
+                "ruby": [
+                    {
+                        "name": "gem install"
+                    }
+                ],
+                "golang": [
+                    {
+                        "name": ""
+                    }
+                ],
+                "php": [
+                    {
+                        "name": "composer install"
+                    }
+                ]
+        }
     }
 }
