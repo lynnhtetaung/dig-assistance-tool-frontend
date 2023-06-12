@@ -21,19 +21,19 @@ export class NonUserCreateHomeComponent implements OnInit {
     }
 
     goToC() {
-        this._router.navigate(['docker_manage/non_user_create'], { queryParams: { type: 'c'} });
+        this._router.navigate(['docker_manage/non_user_create/c_template'], { queryParams: { type: 'c'} });
     }
 
     goToJava() {
-        this._router.navigate(['docker_manage/non_user_create'], { queryParams: { type: 'java'} });
+        this._router.navigate(['docker_manage/non_user_create/java_template'], { queryParams: { type: 'java'} });
     }
 
     goToPython() {
-        this._router.navigate(['docker_manage/non_user_create'], { queryParams: { type: 'python'} });
+        this._router.navigate(['docker_manage/non_user_create/python_template'], { queryParams: { type: 'python'} });
     }
 
     goToJavaScript() {
-        this._router.navigate(['docker_manage/non_user_create'], { queryParams: { type: 'javascript'} });
+        this._router.navigate(['docker_manage/non_user_create/js_template'], { queryParams: { type: 'javascript'} });
     }
 
     goToOther() {

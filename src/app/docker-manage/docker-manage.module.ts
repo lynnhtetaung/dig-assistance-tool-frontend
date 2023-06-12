@@ -19,6 +19,10 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { NonUserUpdateComponent } from "./non-user-update/non-user-update.component";
 import { NonUserCreateHomeComponent } from "./non-user-create-home/non-user-create-home.component";
 import {TooltipModule} from 'primeng/tooltip';
+import { JsTemplateComponent } from "./non-user-create/js-template/js-template.component";
+import { JavaTemplateComponent } from "./non-user-create/java-template/java-template.component";
+import { CTemplateComponent } from "./non-user-create/c-template/c-template.component";
+import { PythonTemplateComponent } from "./non-user-create/python-template/python-template.component";
 
 const PrimeNGModules = [
     RadioButtonModule,
@@ -40,7 +44,11 @@ const PrimeNGModules = [
         DockerListingComponent,
         NonUserCreateComponent,
         NonUserUpdateComponent,
-        NonUserCreateHomeComponent
+        NonUserCreateHomeComponent,
+        JsTemplateComponent,
+        JavaTemplateComponent,
+        CTemplateComponent,
+        PythonTemplateComponent
     ],
     imports: [
         CommonModule,
