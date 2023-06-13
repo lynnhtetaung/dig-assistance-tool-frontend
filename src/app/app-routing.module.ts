@@ -1,18 +1,3 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  {
-    path: '', redirectTo: '/docker_manage', pathMatch: 'full'
-  },
-  {
-    path: 'docker_manage',
-    loadChildren: () => import('../app/docker-manage/docker-manage.module').then(m => m.DockerManageModule)
-  },
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+version https://git-lfs.github.com/spec/v1
+oid sha256:0934069d3d39e0c6daec97fd42d4ca3c12daa51dd5dc0e55b64a5629a661396e
+size 461
