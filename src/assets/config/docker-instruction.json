@@ -4,77 +4,92 @@
             {
                 "id": 0,
                 "name": "--",
+                "hint": "hint",
                 "label": "Choose one docker instruction"
             },
             {
                 "id": 1,
-                "name": "ENTRYPOINT",
-                "label": "ENTRYPOINT"
+                "hint": "To add your entry",
+                "label": "ENTRYPOINT",
+                "name": "ENTRYPOINT"
             },
             {
                 "id": 2,
-                "name": "ARGS",
-                "label": "ARGS"
+                "hint": "To add your arguments",
+                "label": "ARGS",
+                "name": "ARGS"
             },
             {
                 "id": 3,
-                "name": "ENV",
-                "label": "ENV"
+                "hint": "To add environment variable",
+                "label": "ENV",
+                "name": "ENV"
             },
             {
                 "id": 4,
-                "name": "ADD",
-                "label": "ADD"
+                "hint": "To add new commands",
+                "label": "ADD",
+                "name": "ADD"
             },
             {
                 "id": 5,
-                "name": "LABEL",
-                "label": "LABEL"
+                "hint": "LABEL",
+                "label": "LABEL",
+                "name": "LABEL"
             },
             {
                 "id": 6,
-                "name": "MAINTAINER",
-                "label": "MAINTAINER"
+                "hint": "Enter your email",
+                "label": "MAINTAINER",
+                "name": "MAINTAINER"
             },
             {
                 "id": 7,
-                "name": "USER",
-                "label": "USER"
+                "hint": "To define user",
+                "label": "USER",
+                "name": "USER"
             },
             {
                 "id": 8,
-                "name": "FROM",
-                "label": "FROM"
+                "hint": "Enter your base image",
+                "label": "FROM",
+                "name": "FROM"
             },
             {
                 "id": 9,
-                "name": "EXPOSE",
-                "label": "EXPOSE"
+                "hint": "EXPOSE",
+                "label": "EXPOSE",
+                "name": "EXPOSE"
             },
             {
                 "id": 10,
-                "name": "WORKDIR",
-                "label": "WORKDIR"
+                "hint": "To create project directory",
+                "label": "WORKDIR",
+                "name": "WORKDIR"
             },
             {
                 "id": 11,
-                "name": "COPY",
-                "label": "COPY"
+                "hint": "To copy your project directory to docker image",
+                "label": "COPY",
+                "name": "COPY"
             },
             {
                 "id": 12,
-                "name": "RUN",
-                "label": "RUN"
+                "hint": "To install your dependency file",
+                "label": "RUN",
+                "name": "RUN"
             },
             {
                 "id": 13,
-                "name": "CMD",
-                "label": "CMD"
+                "hint": "To install your application",
+                "label": "CMD",
+                "name": "CMD"
             },
             {
                 "id": 14,
-                "name": "VOLUME",
-                "label": "VOLUME"
+                "hint": "VOLUME",
+                "label": "VOLUME",
+                "name": "VOLUME"
             }
         ],
         "available": [
@@ -373,7 +388,8 @@
                 {
                     "id": 1,
                     "key":"FROM",
-                    "value": "xxxxx"
+                    "value": "--",
+                    "hint": "Enter your base image"
                 }
             ],
             "cnn": [
