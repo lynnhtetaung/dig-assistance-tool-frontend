@@ -3,3 +3,8 @@
     font-size: 16px;
     /* Add more custom styles here */
 } 
+
+
+:host ::ng-deep .p-card {
+    background: #cfcfcf !important; /* Set the desired background color */
+  }
