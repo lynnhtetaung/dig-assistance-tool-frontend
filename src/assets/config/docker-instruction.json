@@ -622,6 +622,11 @@
                     {
                         "name": "/var/www/html"
                     }
+                ],
+                "python" : [
+                    {
+                        "name": "/app"
+                    }
                 ]
         },
         "copy": {
@@ -630,9 +635,31 @@
                     "name": ""
                 }
                 ],
-                "javascript": [
+            "javascript": [
                 {
                     "name": ". /usr/src/app"
+                }
+            ],
+            "python": [
+                {
+                    "name": ". ."
+                }
+            ]
+        },
+        "copy_dependency": {
+            "java": [
+                {
+                    "name": ""
+                }
+                ],
+            "javascript": [
+                {
+                    "name": ". /usr/src/app"
+                }
+            ],
+            "python": [
+                {
+                    "name": "requirements.txt ."
                 }
             ]
         },
@@ -649,7 +676,7 @@
                 ],
                 "python": [
                 {
-                    "name": "pip install"
+                    "name": "pip install --no-cache-dir -r requirements.txt"
                 }
                 ],
                 "c": [
@@ -702,7 +729,7 @@
                 ],
                 "python": [
                 {
-                    "name": "pip install"
+                    "name": "['python', 'app.py']"
                 }
                 ],
                 "c": [
