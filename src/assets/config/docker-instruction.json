@@ -588,7 +588,7 @@
             ],
             "c": [
                 {
-                    "name": ""
+                    "name": "gcc -o my-application main.c"
                 }
             ],
             "ruby": [
@@ -610,7 +610,7 @@
         "workdir": {
             "java": [
                 {
-                    "name": ""
+                    "name": "/app"
                 }
                 ],
                 "javascript": [
@@ -627,12 +627,17 @@
                     {
                         "name": "/app"
                     }
+                ],
+                "c": [
+                    {
+                        "name": "/app"
+                    }
                 ]
         },
         "copy": {
             "java": [
                 {
-                    "name": ""
+                    "name": ". ."
                 }
                 ],
             "javascript": [
@@ -644,7 +649,13 @@
                 {
                     "name": ". ."
                 }
+            ],
+            "c": [
+                {
+                    "name": ". ."
+                }
             ]
+
         },
         "copy_dependency": {
             "java": [
@@ -661,12 +672,17 @@
                 {
                     "name": "requirements.txt ."
                 }
+            ],
+            "c": [
+                {
+                    "name": ". ."
+                }
             ]
         },
         "run_dependency": {
             "java": [
                 {
-                    "name": ""
+                    "name": "javac Main.java"
                 }
                 ],
                 "javascript": [
@@ -681,7 +697,7 @@
                 ],
                 "c": [
                     {
-                        "name": ""
+                        "name": "gcc -o my-application main.c"
                     }
                 ],
                 "ruby": [
@@ -719,7 +735,7 @@
         "cmd": {
             "java": [
                 {
-                    "name": ""
+                    "name": "['java', 'Main']"
                 }
                 ],
                 "javascript": [
@@ -734,7 +750,7 @@
                 ],
                 "c": [
                     {
-                        "name": ""
+                        "name": "['./my-application']"
                     }
                 ],
                 "ruby": [
