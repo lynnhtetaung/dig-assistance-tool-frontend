@@ -660,7 +660,7 @@
         "copy_dependency": {
             "java": [
                 {
-                    "name": ""
+                    "name": ". ."
                 }
                 ],
             "javascript": [
