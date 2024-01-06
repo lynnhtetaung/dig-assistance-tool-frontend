@@ -1,6 +1,6 @@
 {
     "/api/*": {
-        "target": "http://automatic-docker-image.test/",
+        "target": "http://dig.test/",
         "secure": false,
         "logLevel": "debug"
     }
