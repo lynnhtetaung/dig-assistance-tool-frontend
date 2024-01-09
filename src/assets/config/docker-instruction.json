@@ -92,6 +92,38 @@
                 "name": "VOLUME"
             }
         ],
+        "available_bk": [
+            {
+                "id": 0,
+                "name": "--",
+                "label": "Choose one associated with your project"
+            },
+            {
+                "id": 1,
+                "name": "javascript",
+                "label": "JavaScript"
+            },
+            {
+                "id": 2,
+                "name": "java",
+                "label": "Java"
+            },
+            {
+                "id": 3,
+                "name": "php",
+                "label": "PHP"
+            },
+            {
+                "id": 4,
+                "name": "python",
+                "label": "Python"
+            },
+            {
+                "id": 5,
+                "name": "others",
+                "label": "Others"
+            }
+        ],
         "available": [
             {
                 "id": 0,

@@ -8,3 +8,9 @@
 :host ::ng-deep .p-card {
     background: #cfcfcf !important; /* Set the desired background color */
   }
+
+  .label-width {
+    display: inline-block;
+    width: 150px; /* Adjust this value as needed for desired label width */
+    /* Other styling as required */
+}
